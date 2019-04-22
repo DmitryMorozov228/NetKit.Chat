@@ -42,7 +42,7 @@ namespace Softeq.NetKit.Chat.Data.Persistent.Sql
                 {
                     var context = x.Resolve<IComponentContext>();
                     var config = context.Resolve<IConfiguration>();
-                    return new DatabaseConfig(config["ConnectionStrings:DefaultConnection"]);
+                    return new DatabaseConfig(config["Database:ConnectionString"]);
                 })
                 .AsSelf()
                 .SingleInstance();
